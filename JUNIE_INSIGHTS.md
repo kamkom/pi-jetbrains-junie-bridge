@@ -321,7 +321,7 @@ for m, vals in sorted(models.items()):
 
 The integer values represent `[maxOutputTokens, maxContextTokens]`. When only one value appears, `maxOutputTokens` is null (uses provider default) and the single value is `maxContextTokens`.
 
-### Current capabilities (v3013.7)
+### Current capabilities (v3419.7)
 
 | Model | maxOutput | maxContext | Notes |
 |-------|-----------|------------|-------|
@@ -329,12 +329,15 @@ The integer values represent `[maxOutputTokens, maxContextTokens]`. When only on
 | `claude-sonnet-4-6` | 128,000 | 1,000,000 | |
 | `claude-opus-4-8` | 128,000 | 1,000,000 | |
 | `claude-opus-5` | 128,000 | 1,000,000 | maxOutput probed live; context assumed same as siblings |
+| `claude-opus-5-5` | 128,000 | 1,000,000 | |
 | `claude-opus-4-7` | 128,000 | 1,000,000 | |
 | `claude-opus-4-6` | 128,000 | 1,000,000 | |
 | `claude-fable-5` | 128,000 | 1,000,000 | |
 | `claude-fable-5-1` | 128,000 | 1,000,000 | |
 | `claude-haiku-4-5` | 64,000 | 200,000 | Older model, smaller limits |
 | `openai-gpt-6-astra` | null | 1,000,000 | |
+| `openai-gpt-6-luna` | null | 1,000,000 | |
+| `openai-gpt-6-sol` | null | 1,000,000 | |
 | `openai-gpt-5-5` | null | 1,000,000 | |
 | `openai-gpt-5-4` | null | 1,000,000 | |
 | `openai-gpt-5-4-mini` | null | 1,000,000 | |
@@ -343,7 +346,7 @@ The integer values represent `[maxOutputTokens, maxContextTokens]`. When only on
 | `openai-gpt-5-2` | null | 400,000 | |
 | `openai-gpt-5-2-*` | null | 400,000 | mini, codex, pro variants |
 
-### Grok and Gemini capabilities (v3013.7)
+### Grok and Gemini capabilities (v3419.7)
 
 | Model | maxOutput | maxContext | in/out $ per 1M |
 |-------|-----------|------------|-----------------|
@@ -455,6 +458,7 @@ When updating to a new Junie CLI version:
 
 | Bridge update | Junie CLI version | Changes |
 |--------------|-------------------|---------|
+| 2026-09-23 | v3419.7 (release) | Added `claude-opus-5-5`, `openai-gpt-6-luna`, `openai-gpt-6-sol` (all verified live). Updated `Grazie-Agent` version to 3419.7. |
 | 2026-09-17 | v3013.7 (release) | Added `claude-fable-5-1`, `openai-gpt-6-astra`, `grok-4-6`, `gemini-3.5-flash`, `gemini-3.7-flash`, `gemini-3.8-flash` (all verified live). `gemini-3-pro-preview` is in the JAR but the Google publisher 404s it — not added. Noted that unknown Gemini IDs answer Grazie `400 Unsupported model type` while catalogued-but-dead ones answer a publisher `404`, which makes the two states distinguishable. Updated `Grazie-Agent` version to 3013.7. |
 | 2026-07-28 | v2530.1 (nightly) | Added xAI (`grok-4-3`, `grok-4-5`) and Google (5 Gemini 3 models). Both were reachable all along with a plain subscription token — the blocker was routing, not auth: Grok needs `X-LLM-Model: grok` on `/v1/responses` (never `/v1/chat/completions`), Google needs the Vertex-style `generateContent` path. See *Provider Routing*. `deepseek-v4-flash` remains unreachable (AliCloud route returns empty 404s). |
 | 2026-07-27 | v2144.7 | Added `claude-opus-5`. It is served by the Grazie backend before it shows up in the IntelliJ/Junie model picker (same as the gpt-5.6 models were). Found via llm24.net, verified live (see *Probing Models Without the JAR*). |

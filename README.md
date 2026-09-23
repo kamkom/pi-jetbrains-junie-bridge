@@ -38,6 +38,7 @@ The list below is mostly in sync with the models Junie itself offers, as publish
 - `claude-opus-4-7`
 - `claude-opus-4-8`
 - `claude-opus-5`
+- `claude-opus-5-5`
 - `claude-fable-5`
 - `claude-fable-5-1`
 
@@ -49,6 +50,8 @@ The list below is mostly in sync with the models Junie itself offers, as publish
 - `openai-gpt-5-6-terra`
 - `openai-gpt-5-6-sol`
 - `openai-gpt-6-astra`
+- `openai-gpt-6-luna`
+- `openai-gpt-6-sol`
 
 **xAI:**
 - `grok-4-3`
