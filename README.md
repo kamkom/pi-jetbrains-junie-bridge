@@ -1,11 +1,15 @@
-# pi-jetbrains-junie-bridge
+# pi-junie-bridge
 
-A [Pi](https://pi.dev/) extension that lets you use [JetBrains Junie](https://junie.jetbrains.com/) as the AI backend for the Pi coding agent — using your existing Junie subscription.
+An unofficial [Pi](https://pi.dev/) extension that lets you use [JetBrains Junie](https://junie.jetbrains.com/) as the AI backend for the Pi coding agent — using your existing Junie subscription.
+
+> Actively maintained fork of [sschatter/pi-jetbrains-junie-bridge](https://github.com/sschatter/pi-jetbrains-junie-bridge) by Sven Schatter. Fixes and new models are offered upstream as well.
+>
+> Not affiliated with or endorsed by JetBrains. JetBrains and Junie are trademarks of JetBrains s.r.o.
 
 ## Install
 
 ```bash
-pi install npm:pi-jetbrains-junie-bridge
+pi install npm:@kamkom/pi-junie-bridge
 ```
 
 Then inside `pi` run the `/login` command.  Select `Use a subscription` and then `JetBrains Junie` to authenticate.
@@ -118,4 +122,4 @@ It is not officially supported by JetBrains. Use it in accordance with the [JetB
 
 ## License
 
-MIT
+[MIT](./LICENSE) — © 2026 Sven Schatter (original author), © 2026 Kamil Kompala (fork).

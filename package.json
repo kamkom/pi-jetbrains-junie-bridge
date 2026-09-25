@@ -1,7 +1,7 @@
 {
-  "name": "pi-jetbrains-junie-bridge",
-  "version": "1.4.0",
-  "description": "Pi extension that connects Pi coding agent with JetBrains Junie as the AI backend",
+  "name": "@kamkom/pi-junie-bridge",
+  "version": "1.5.0",
+  "description": "Unofficial Pi extension that lets the Pi coding agent use JetBrains Junie as its AI backend",
   "type": "module",
   "pi": {
     "extensions": [
@@ -16,16 +16,20 @@
     "coding-agent",
     "ai"
   ],
-  "author": "Sven Schatter",
+  "author": "Kamil Kompala (https://github.com/kamkom)",
+  "contributors": [
+    "Sven Schatter (https://github.com/sschatter)",
+    "Christoph Welcz"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sschatter/pi-jetbrains-junie-bridge.git"
+    "url": "git+https://github.com/kamkom/pi-junie-bridge.git"
   },
   "bugs": {
-    "url": "https://github.com/sschatter/pi-jetbrains-junie-bridge/issues"
+    "url": "https://github.com/kamkom/pi-junie-bridge/issues"
   },
-  "homepage": "https://github.com/sschatter/pi-jetbrains-junie-bridge#readme",
+  "homepage": "https://github.com/kamkom/pi-junie-bridge#readme",
   "engines": {
     "node": ">=20"
   },
@@ -33,9 +37,13 @@
     "index.ts",
     "lib/",
     "docs/",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
